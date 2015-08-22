@@ -28,6 +28,9 @@ node[:deploy].each do |application, deploy|
     path ::File.join(deploy[:deploy_to], "shared")
     environment_variables deploy[:environment_variables]
   end
+  
+  execute "npm start" do
+  end
 
   ruby_block "restart node.js application #{application}" do
     block do
