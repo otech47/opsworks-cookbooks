@@ -31,6 +31,9 @@ node[:deploy].each do |application, deploy|
   
   execute "npm deploy" do
   end
+  
+  execute "npm start" do
+  end
 
   ruby_block "restart node.js application #{application}" do
     block do
