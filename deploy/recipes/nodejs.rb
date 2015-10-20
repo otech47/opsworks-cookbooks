@@ -29,7 +29,7 @@ node[:deploy].each do |application, deploy|
     environment_variables deploy[:environment_variables]
   end
   
-  execute "npm start" do
+  execute "npm deploy" do
   end
 
   ruby_block "restart node.js application #{application}" do
