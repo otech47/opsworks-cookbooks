@@ -1,4 +1,6 @@
 def infrastructure_class?(other)
+  p "test"
+  p node[:opsworks][:instance][:infrastructure_class]
   node[:opsworks][:instance][:infrastructure_class] == other
 end
 
