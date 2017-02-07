@@ -4,7 +4,6 @@ end
 
 def infrastructure_class?(other)
   instance = AttributeSearch.search("aws_opsworks_instance").first
-  p instance["infrastructure_class"]
   instance["infrastructure_class"] == other
 end
 

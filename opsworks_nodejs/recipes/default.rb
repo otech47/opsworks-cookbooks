@@ -38,7 +38,13 @@ else
     action :install
   end
   
-  if node[:opsworks_npm][:version]
+  class AttributeSearch
+    extend Chef::DSL::DataQuery
+  end
+  app = AttributeSearch.search("aws_opsworks_app").first
+  npm_version = app["environment"]["NPM_VERSION"]
+
+  if npm_version
     log "downloading" do
       message "Update npm"
       level :info
@@ -47,7 +53,7 @@ else
     end
 
     execute "npm update" do
-        command "npm install -g npm@v#{node[:opsworks_npm][:version]}"
+        command "npm install -g npm@v#{npm_version}"
     end
   end
 end
