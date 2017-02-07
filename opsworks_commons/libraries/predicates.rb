@@ -1,6 +1,7 @@
 def infrastructure_class?(other)
-  p node[:opsworks]
-  node[:opsworks][:instance][:infrastructure_class] == other
+  instance = search("aws_opsworks_instance").first
+  p instance["infrastructure_class"]
+  instance["infrastructure_class"] == other
 end
 
 def rhel6?
