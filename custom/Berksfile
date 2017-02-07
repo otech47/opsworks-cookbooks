@@ -1,0 +1,13 @@
+source 'https://supermarket.chef.io'
+
+metadata
+cookbook 'agent_version', git: "https://github.com/otech47/opsworks-cookbooks.git", branch: "chef-12", rel: 'agent_version'
+cookbook 'deploy', git: "https://github.com/otech47/opsworks-cookbooks.git", branch: "chef-12", rel: 'deploy'
+cookbook 'dependencies', git: "https://github.com/otech47/opsworks-cookbooks.git", branch: "chef-12", rel: 'dependencies'
+cookbook 'ebs', git: "https://github.com/otech47/opsworks-cookbooks.git", branch: "chef-12", rel: 'ebs'
+cookbook 'opsworks_ganglia', git: "https://github.com/otech47/opsworks-cookbooks.git", branch: "chef-12", rel: 'opsworks_ganglia'
+cookbook 'opsworks_initial_setup', git: "https://github.com/otech47/opsworks-cookbooks.git", branch: "chef-12", rel: 'opsworks_initial_setup'
+cookbook 'opsworks_nodejs', git: "https://github.com/otech47/opsworks-cookbooks.git", branch: "chef-12", rel: 'opsworks_nodejs'
+cookbook 'opsworks_shutdown', git: "https://github.com/otech47/opsworks-cookbooks.git", branch: "chef-12", rel: 'opsworks_shutdown'
+cookbook 'ssh_host_keys', git: "https://github.com/otech47/opsworks-cookbooks.git", branch: "chef-12", rel: 'ssh_host_keys'
+cookbook 'ssh_users', git: "https://github.com/otech47/opsworks-cookbooks.git", branch: "chef-12", rel: 'ssh_users'
